@@ -5,7 +5,7 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [vue(), tailwindcss()],
-  base: '/',
+  base: '/LandingServices/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src')
