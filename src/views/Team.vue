@@ -1,9 +1,14 @@
+<script setup>
+import MainLayout from '../layouts/MainLayout.vue'
+import TeamPro from '../components/TeamPro.vue'
+import { Github, Linkedin, Twitter, Dribbble } from 'lucide-vue-next'
+
+</script>
+
 <template>
   <MainLayout>
-    <FloatingMenu />
     <section
       class="relative min-h-screen py-32 px-6
-             bg-gradient-to-b from-[#1b1630] via-[#120f24] to-[#0b0916]
              text-white overflow-hidden" >
 
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.18),transparent_60%)]"></div>
@@ -30,12 +35,12 @@
         class="relative max-w-7xl mx-auto grid gap-10 md:grid-cols-2 lg:grid-cols-3"
       >
         <TeamPro
-          name="Ana Pérez"
+          name="Jessi Villa"
           role="CEO & Founder"
           photo="/assets/team1.jpg"
           :links="[
-            { icon: 'Linkedin', url: '#' },
-            { icon: 'Twitter', url: '#' }
+            { icon: Linkedin, url: '#' },
+            { icon: Twitter, url: '#' }
           ]"
         />
 
@@ -44,8 +49,8 @@
           role="CTO"
           photo="/assets/team2.jpg"
           :links="[
-            { icon: 'Github', url: '#' },
-            { icon: 'Linkedin', url: '#' }
+            { icon: Github, url: '#' },
+            { icon: Linkedin, url: '#' }
           ]"
         />
 
@@ -54,8 +59,8 @@
           role="Lead Designer"
           photo="/assets/team3.jpg"
           :links="[
-            { icon: 'Dribbble', url: '#' },
-            { icon: 'Linkedin', url: '#' }
+            { icon: Dribbble, url: '#' },
+            { icon: Linkedin, url: '#' }
           ]"
         />
       </div>
@@ -63,8 +68,4 @@
   </MainLayout>
 </template>
 
-<script setup>
-import MainLayout from '../layouts/MainLayout.vue'
-import TeamPro from '../components/TeamPro.vue'
-import FloatingMenu from '../components/FloatingMenu.vue'
-</script>
+

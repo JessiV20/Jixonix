@@ -1,9 +1,16 @@
+<script setup>
+import MainLayout from '../layouts/MainLayout.vue'
+import ServicePro from '../components/ServicePro.vue'
+import WebIcon from '../components/icons/WebIcon.vue';
+import MobileIcon from '../components/icons/MobileIcon.vue';
+import IaIcon from '../components/icons/IaIcon.vue';
+</script>
+
+
 <template>
   <MainLayout>
-    <FloatingMenu />
     <section
       class="relative min-h-screen py-32 px-6
-             bg-gradient-to-b from-[#1b1630] via-[#120f24] to-[#0b0916]
              text-white overflow-hidden"  >
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.18),transparent_60%)]"></div>
 
@@ -16,8 +23,8 @@
         </span>
 
         <h1 class="text-5xl md:text-6xl font-bold mb-6">
-          Soluciones diseñadas para
-          <span class="text-purple-400">escalar tu negocio</span>
+          Construimos el sistema que 
+          <span class="text-purple-400">tu negocio necesita</span>
         </h1>
 
         <p class="text-gray-400 text-lg">
@@ -25,45 +32,58 @@
         </p>
       </div>
 
-      <div
-        class="relative max-w-7xl mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3"
-      >
+      <div class="relative max-w-7xl mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         <ServicePro
-          icon="🌐"
           title="Desarrollo Web"
           description="Aplicaciones web rápidas, seguras y escalables con tecnologías modernas."
-        />
+          :features="[
+            'Plataformas responsive y modernas',
+            'Optimización SEO y rendimiento',
+            'Integración con APIs y sistemas existentes',
+            'Diseño UX/UI enfocado en conversión',
+            'Mantenimiento y soporte continuo'
+          ]"
+        >
+          <template #icon>
+            <WebIcon class="w-12 h-12 text-sky-400" />
+          </template>
+        </ServicePro>
 
         <ServicePro
-          icon="📱"
           title="Aplicaciones Móviles"
           description="Apps nativas y multiplataforma con experiencia de usuario impecable."
-        />
+          :features="[
+            'iOS y Android nativos o multiplataforma',
+            'Interfaz intuitiva y atractiva',
+            'Notificaciones y sincronización en tiempo real',
+            'Seguridad y escalabilidad',
+            'Mantenimiento y soporte continuo'
+          ]"
+        >
+          <template #icon>
+            <MobileIcon class="w-12 h-12 text-purple-400" />
+          </template>
+        </ServicePro>
 
         <ServicePro
-          icon="🤖"
           title="Inteligencia Artificial"
           description="Automatización, análisis predictivo y soluciones basadas en datos."
-        />
+          :features="[
+            'Automatización de procesos repetitivos',
+            'Análisis predictivo y decisiones basadas en datos',
+            'Chatbots y asistentes inteligentes',
+            'Integración con sistemas existentes',
+            'Mantenimiento y soporte continuo'
+          ]"
+        >
+          <template #icon>
+            <IaIcon class="w-12 h-12 text-blue-400" />
+          </template>
+        </ServicePro>
 
-        <ServicePro
-          icon="☁️"
-          title="Cloud & DevOps"
-          description="Infraestructura en la nube, CI/CD y despliegues sin fricción."
-        />
-
-        <ServicePro
-          icon="🛡️"
-          title="Ciberseguridad"
-          description="Protección avanzada, auditorías y hardening de sistemas."
-        />
       </div>
+
     </section>
   </MainLayout>
 </template>
 
-<script setup>
-import MainLayout from '../layouts/MainLayout.vue'
-import ServicePro from '../components/ServicePro.vue'
-import FloatingMenu from '../components/FloatingMenu.vue'
-</script>
