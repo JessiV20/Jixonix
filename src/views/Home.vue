@@ -12,11 +12,11 @@ import IaIcon from '../components/icons/IaIcon.vue';
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.15),transparent_60%)]"></div>
       <div class="relative z-10 max-w-4xl">
         <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
-          Innovación para la
-          <span class="text-purple-400">colaboración digital</span>
+          Soluciones digitales hechas a la 
+          <span class="text-purple-400">medida de tu negocio.</span>
         </h1>
         <p class="text-gray-400 text-lg mb-10">
-          Creamos soluciones tecnológicas modernas, escalables y visualmente impactantes.
+          Creo soluciones digitales seguras y funcionales adaptadas a las necesidades de tu empresa.
         </p>
         <div class="flex justify-center gap-4">
           <router-link to="/services" class="px-6 py-3 rounded-full bg-purple-600 hover:bg-purple-500 transition font-medium"
@@ -24,9 +24,10 @@ import IaIcon from '../components/icons/IaIcon.vue';
             Empezar ahora
           </router-link>
 
-          <button class="px-6 py-3 rounded-full border border-white/20 hover:bg-white/5 transition">
-            ▶ Ver video
-          </button>
+          <router-link to="/contact" class="px-6 py-3 rounded-full border border-white/20 hover:bg-white/5 transition"
+          >
+            Contactanos →
+          </router-link>
         </div>
       </div>
     </section>
@@ -39,8 +40,8 @@ import IaIcon from '../components/icons/IaIcon.vue';
             🧩 Servicios
           </span>
           <h2 class="text-4xl md:text-5xl font-bold mb-6">
-            Soluciones que
-            <span class="text-purple-400">impulsan tu negocio</span>
+            Construimos el sistema
+            <span class="text-purple-400">que tu negocio necesita</span>
           </h2>
           <p class="text-gray-400 max-w-2xl mx-auto text-lg">
             Diseñamos, desarrollamos y escalamos productos digitales con tecnología de alto nivel.
@@ -50,7 +51,7 @@ import IaIcon from '../components/icons/IaIcon.vue';
           <HomePro
             title="Desarrollo Web"
             description="Plataformas modernas, rápidas y escalables enfocadas en conversión y experiencia de usuario."
-            link="#"
+            link="/services"
           >
             <WebIcon class="w-8 h-8 text-sky-400"/>
           </HomePro>
@@ -58,7 +59,7 @@ import IaIcon from '../components/icons/IaIcon.vue';
           <HomePro
             title="Apps Móviles"
             description="Aplicaciones iOS y Android con alto rendimiento, seguridad y UX impecable."
-            link="#"
+            link="/services"
           >
             <MobileIcon class="w-8 h-auto text-gray-300"/>
           </HomePro>
@@ -66,7 +67,7 @@ import IaIcon from '../components/icons/IaIcon.vue';
           <HomePro
             title="IA & Automatización"
             description="Optimizamos procesos con inteligencia artificial, analítica avanzada y automatización."
-            link="#"
+            link="/services"
           >
             <IaIcon class="w-8 h-8 text-blue-400"/>
           </HomePro>

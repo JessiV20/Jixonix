@@ -55,6 +55,7 @@
 </template>
 
 <script setup>
+  import { Github, Linkedin, Twitter, Dribbble } from 'lucide-vue-next'
 defineProps({
   name: String,
   role: String,

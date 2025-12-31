@@ -1,6 +1,8 @@
 <script setup>
 import MainLayout from '../layouts/MainLayout.vue'
 import TeamPro from '../components/TeamPro.vue'
+import { Github, Linkedin, Twitter, Dribbble } from 'lucide-vue-next'
+
 </script>
 
 <template>
@@ -33,12 +35,12 @@ import TeamPro from '../components/TeamPro.vue'
         class="relative max-w-7xl mx-auto grid gap-10 md:grid-cols-2 lg:grid-cols-3"
       >
         <TeamPro
-          name="Ana Pérez"
+          name="Jessi Villa"
           role="CEO & Founder"
           photo="/assets/team1.jpg"
           :links="[
-            { icon: 'Linkedin', url: '#' },
-            { icon: 'Twitter', url: '#' }
+            { icon: Linkedin, url: '#' },
+            { icon: Twitter, url: '#' }
           ]"
         />
 
@@ -47,8 +49,8 @@ import TeamPro from '../components/TeamPro.vue'
           role="CTO"
           photo="/assets/team2.jpg"
           :links="[
-            { icon: 'Github', url: '#' },
-            { icon: 'Linkedin', url: '#' }
+            { icon: Github, url: '#' },
+            { icon: Linkedin, url: '#' }
           ]"
         />
 
@@ -57,8 +59,8 @@ import TeamPro from '../components/TeamPro.vue'
           role="Lead Designer"
           photo="/assets/team3.jpg"
           :links="[
-            { icon: 'Dribbble', url: '#' },
-            { icon: 'Linkedin', url: '#' }
+            { icon: Dribbble, url: '#' },
+            { icon: Linkedin, url: '#' }
           ]"
         />
       </div>

@@ -20,9 +20,11 @@
             <p class="text-gray-400 mb-6">
               {{ description }}
             </p>
-
-            <a href={{ link }} class="text-purple-400 font-medium group-hover:underline">
+            <router-link
+              :to="link"
+              class="text-purple-400 font-medium group-hover:underline"
+            >
               Saber más →
-            </a>
+            </router-link>
           </div>
 </template>
